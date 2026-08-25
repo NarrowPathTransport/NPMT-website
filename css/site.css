@@ -301,18 +301,19 @@ li:last-child { margin-bottom: 0; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1.25rem;
-  min-height: 82px;
+  max-width: 1360px;
+  gap: 1.75rem;
+  min-height: 92px;
   padding-block: 0.65rem;
 }
 
-.brand { display: inline-flex; align-items: center; gap: 0.75rem; text-decoration: none; }
-.brand__mark { width: 46px; height: auto; flex: none; }
+.brand { display: inline-flex; align-items: center; gap: 0.9rem; text-decoration: none; }
+.brand__mark { width: 56px; height: auto; flex: none; }
 .brand__text { display: flex; flex-direction: column; line-height: 1.05; }
 .brand__name {
   font-family: var(--display);
   font-weight: 600;
-  font-size: 1.0625rem;
+  font-size: 1.1875rem;
   color: var(--pine-deep);
   letter-spacing: -0.005em;
 }
@@ -326,9 +327,10 @@ li:last-child { margin-bottom: 0; }
   margin-top: 2px;
 }
 
-.nav { display: flex; align-items: center; gap: 0.25rem; }
+.nav { display: flex; align-items: center; gap: 0.45rem; }
 .nav a {
-  font-size: 0.9375rem;
+  white-space: nowrap;
+  font-size: 1rem;
   font-weight: 500;
   color: var(--ink);
   text-decoration: none;
@@ -339,8 +341,15 @@ li:last-child { margin-bottom: 0; }
 .nav a:hover { color: var(--pine); background: var(--pine-wash); }
 .nav a[aria-current="page"] { color: var(--pine); font-weight: 600; }
 
-.header-cta { display: inline-flex; align-items: center; gap: 0.6rem; }
-.header-cta .btn { padding: 0.8rem 1.3rem; font-size: 0.9375rem; }
+.header-cta { display: inline-flex; align-items: center; gap: 0.6rem; flex: none; }
+.header-cta .btn {
+  min-width: 170px;
+  padding: 0.9rem 1.45rem;
+  font-size: 1rem;
+  font-weight: 700;
+  white-space: nowrap;
+  text-align: center;
+}
 
 .nav-toggle {
   display: none;
@@ -383,7 +392,7 @@ li:last-child { margin-bottom: 0; }
 @media (max-width: 560px) {
   .brand__mark { width: 38px; }
   .brand__name { font-size: 0.9375rem; }
-  .header-cta .btn { padding: 0.7rem 1rem; font-size: 0.875rem; }
+  .header-cta .btn { min-width: 0; padding: 0.7rem 1rem; font-size: 0.875rem; }
 }
 
 /* ---------------------------------------------------------------- hero */
