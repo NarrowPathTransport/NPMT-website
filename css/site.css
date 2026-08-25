@@ -479,6 +479,12 @@ li:last-child { margin-bottom: 0; }
   max-width: 56ch;
   margin-bottom: 2rem;
 }
+.hero__lede em {
+  font-family: var(--display);
+  font-size: 1em;
+  font-style: italic;
+  color: var(--gold-light);
+}
 
 .hero__actions { display: flex; flex-wrap: wrap; gap: 0.85rem; }
 
