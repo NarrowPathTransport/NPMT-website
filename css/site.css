@@ -113,10 +113,17 @@ li { margin-bottom: 0.5em; }
 li:last-child { margin-bottom: 0; }
 
 :focus-visible {
-  outline: 3px solid var(--gold);
+  outline: 3px solid var(--gold-deep);
   outline-offset: 3px;
   border-radius: 3px;
 }
+/* Lighter gold on dark surfaces so the focus ring stays visible */
+.band--pine :focus-visible,
+.band--pine-grad :focus-visible,
+.hero :focus-visible,
+.page-hero :focus-visible,
+.cta-panel :focus-visible,
+.site-footer :focus-visible { outline-color: var(--gold-light); }
 
 .skip {
   position: absolute; left: -9999px;
@@ -369,7 +376,7 @@ li:last-child { margin-bottom: 0; }
 @media (max-width: 1020px) {
   .nav {
     position: fixed;
-    inset: 82px 0 auto 0;
+    inset: 100% 0 auto 0;
     flex-direction: column;
     align-items: stretch;
     gap: 0;
@@ -390,9 +397,13 @@ li:last-child { margin-bottom: 0; }
 }
 
 @media (max-width: 560px) {
+  .site-header__inner { gap: 1rem; min-height: 76px; }
+  .brand { gap: 0.65rem; }
   .brand__mark { width: 38px; }
   .brand__name { font-size: 0.9375rem; }
-  .header-cta .btn { min-width: 0; padding: 0.7rem 1rem; font-size: 0.875rem; }
+  /* The booking button moves to the quick-actions bar at the bottom of the
+     screen, so the header only needs the brand and the menu toggle. */
+  .header-cta .btn { display: none; }
 }
 
 /* ---------------------------------------------------------------- hero */
@@ -453,12 +464,16 @@ li:last-child { margin-bottom: 0; }
   text-transform: uppercase;
   color: var(--gold-light);
   margin-bottom: 1.15rem;
+  max-width: none;
 }
 .hero__kicker::before {
   content: "";
   width: 34px; height: 2px;
   background: var(--gold);
   border-radius: 2px;
+  flex: none;
+  align-self: flex-start;
+  margin-top: 0.6em; /* stays beside the first line if the kicker wraps */
 }
 
 .hero h1 {
@@ -892,7 +907,7 @@ details.qa[open] > summary::after { transform: rotate(-135deg); }
 .hours th { font-weight: 600; color: var(--pine-deep); }
 .hours td { color: var(--ink-soft); text-align: right; }
 .hours tr:last-child th, .hours tr:last-child td { border-bottom: 0; }
-.hours .is-closed { color: var(--ink-soft); opacity: 0.65; }
+.hours .is-closed { color: var(--ink-soft); font-style: italic; }
 
 /* ---------------------------------------------------------------- CTA */
 .cta-panel {
@@ -983,6 +998,27 @@ details.qa[open] > summary::after { transform: rotate(-135deg); }
   color: rgba(255, 255, 255, 0.55);
 }
 
+/* ------------------------------------------------------- quick actions
+   Phone-only bar that keeps "Request a ride" and "Call now" in reach. */
+.quick-actions { display: none; }
+@media (max-width: 560px) {
+  .quick-actions {
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    z-index: 55;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+    padding: 0.65rem var(--gutter) calc(0.65rem + env(safe-area-inset-bottom));
+    background: rgba(255, 255, 255, 0.96);
+    border-top: 1px solid var(--cream-line);
+    box-shadow: 0 -4px 18px rgba(13, 59, 48, 0.08);
+  }
+  .quick-actions .btn { padding: 0.85rem 0.75rem; font-size: 0.9375rem; }
+  .quick-actions .btn:hover { transform: none; }
+  body { padding-bottom: calc(76px + env(safe-area-inset-bottom)); }
+}
+
 /* ------------------------------------------------------------- motion */
 /* Content is visible by default. The hidden state only ever applies once
    JavaScript has confirmed it can restore it, so a script failure can never
@@ -1007,6 +1043,6 @@ details.qa[open] > summary::after { transform: rotate(-135deg); }
 
 /* --------------------------------------------------------------- print */
 @media print {
-  .site-header, .nav-toggle, .cta-panel, .btn { display: none !important; }
+  .site-header, .nav-toggle, .cta-panel, .btn, .quick-actions { display: none !important; }
   body { font-size: 11pt; color: #000; }
 }
