@@ -441,9 +441,9 @@ li:last-child { margin-bottom: 0; }
       rgba(13, 59, 48, 0.30) 32%,
       rgba(13, 59, 48, 0.72) 74%,
       rgba(13, 59, 48, 0.94) 100%),
-    linear-gradient(90deg,
-      rgba(13, 59, 48, 0.55) 0%,
-      rgba(13, 59, 48, 0.12) 62%);
+    radial-gradient(ellipse 62% 58% at 50% 46%,
+      rgba(13, 59, 48, 0.50) 0%,
+      rgba(13, 59, 48, 0.14) 100%);
 }
 
 .hero__inner {
@@ -452,7 +452,12 @@ li:last-child { margin-bottom: 0; }
   padding-block: clamp(3rem, 8vw, 5.5rem);
 }
 
-.hero__content { max-width: 800px; }
+/* Centered hero (approved by Russ, November 11, 2026). */
+.hero__content {
+  max-width: 880px;
+  margin-inline: auto;
+  text-align: center;
+}
 
 .hero__kicker {
   display: inline-flex;
@@ -465,15 +470,21 @@ li:last-child { margin-bottom: 0; }
   color: var(--gold-light);
   margin-bottom: 1.15rem;
   max-width: none;
+  justify-content: center;
+  text-wrap: balance;
 }
-.hero__kicker::before {
+.hero__kicker::before,
+.hero__kicker::after {
   content: "";
   width: 34px; height: 2px;
   background: var(--gold);
   border-radius: 2px;
   flex: none;
-  align-self: flex-start;
-  margin-top: 0.6em; /* stays beside the first line if the kicker wraps */
+}
+@media (max-width: 599px) {
+  /* On a phone the kicker wraps, so the side rules would float. Drop them. */
+  .hero__kicker::before, .hero__kicker::after { display: none; }
+  .hero__kicker { letter-spacing: 0.14em; line-height: 1.7; }
 }
 
 .hero h1 {
@@ -481,6 +492,7 @@ li:last-child { margin-bottom: 0; }
   font-size: clamp(2.5rem, 6.2vw, 4rem);
   letter-spacing: -0.02em;
   margin-bottom: 1rem;
+  text-wrap: balance;
 }
 .hero h1 em {
   font-style: italic;
@@ -491,8 +503,9 @@ li:last-child { margin-bottom: 0; }
   font-size: clamp(1.125rem, 2.1vw, 1.375rem);
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.90);
-  max-width: 66ch;
-  margin-bottom: 2rem;
+  max-width: 60ch;
+  margin: 0 auto 2rem;
+  text-wrap: pretty;
 }
 .hero__lede em {
   font-family: var(--display);
@@ -501,11 +514,16 @@ li:last-child { margin-bottom: 0; }
   color: var(--gold-light);
 }
 
-.hero__actions { display: flex; flex-wrap: wrap; gap: 0.85rem; }
+.hero__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.85rem; }
+@media (max-width: 599px) {
+  .hero__actions { flex-direction: column; align-items: center; }
+  .hero__actions .btn { width: 100%; max-width: 21rem; justify-content: center; }
+}
 
 .hero__meta {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 0.6rem 1.75rem;
   margin-top: 2.5rem;
   padding-top: 1.5rem;
@@ -529,7 +547,6 @@ li:last-child { margin-bottom: 0; }
   gap: clamp(1.75rem, 3.5vw, 2.75rem);
   padding-bottom: clamp(1.5rem, 3vw, 2.5rem);
 }
-.hero--estimator .hero__lede { max-width: 52ch; }
 
 .estimator {
   position: relative;
@@ -801,7 +818,8 @@ li:last-child { margin-bottom: 0; }
 .card h3 { font-size: var(--step-1); margin-bottom: 0.45rem; }
 .card p { font-size: var(--step--1); color: var(--ink-soft); line-height: 1.62; }
 
-.card--link { text-decoration: none; color: inherit; display: block; }
+.card--link { text-decoration: none; color: inherit; display: flex; flex-direction: column; }
+.card--link .chip { align-self: flex-start; }
 .card--link:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-m);
@@ -811,7 +829,9 @@ li:last-child { margin-bottom: 0; }
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  margin-top: 1rem;
+  align-self: flex-start;
+  margin-top: auto;
+  padding-top: 1rem;
   font-size: 0.875rem;
   font-weight: 600;
   color: var(--pine);
