@@ -16,6 +16,6 @@
    Never put a server secret, Stripe secret key, or Microsoft secret here. */
 
 window.NPT_QUOTE = {
-  googleApiKey: "",
+  googleApiKey: "AIzaSyC9tJXtLZt54Wy_Ndz4LvltQ6GVs2wF-Sw",
   mapId: ""
 };
