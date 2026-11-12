@@ -53,15 +53,15 @@ Until confirmed, do not repeat these claims in new pages, metadata, structured d
 
 ## Priority 4 Proposed pricing dashboard discovery
 
-**Status: concept only.**
+**Status: stage one prototype built on `feature/pricing-quote-tool` (see `docs/PRICING_TOOL.md`). Hidden until a Google key is added. Not published.**
 
-- [ ] Approve the underlying financial model and exact pricing rules.
+- [x] Approve stage one rates (Ambulatory $65 + $4.00/mi, Wheelchair $75 + $4.25/mi). Full cost model still to be built.
 - [ ] Define estimate, quote, and booking-confirmation states.
 - [ ] Define required inputs and exception-handling without PHI.
 - [ ] Select and price the routing provider.
 - [ ] Decide address processing and retention rules.
 - [ ] Define manual review, quote expiration, and capacity checks.
-- [ ] Decide Microsoft Bookings handoff.
+- [x] Decide Microsoft Bookings handoff (Request a ride opens Bookings; Bookings checks availability).
 - [ ] Decide payment timing, processor, cancellation/refund rules, and facility billing treatment.
 - [ ] Complete privacy, security, accessibility, tax, insurance, and legal review.
 - [ ] Build a non-production prototype only after the decisions above are documented.

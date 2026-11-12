@@ -95,6 +95,45 @@
         </span>
       </div>
     </div>
+
+    <!-- Trip estimate tool. Hidden until js/quote-config.js has a Google key. -->
+    <aside class="estimator" id="estimator" aria-labelledby="estimatorTitle" hidden>
+      <h2 class="estimator__title" id="estimatorTitle">Estimate your trip</h2>
+      <p class="estimator__sub">Enter two addresses to see the cost. No payment is due until after your ride.</p>
+
+      <fieldset class="estimator__seg">
+        <legend class="visually-hidden">Transportation type</legend>
+        <input type="radio" name="estimatorService" id="svcWheelchair" value="wheelchair" checked>
+        <label for="svcWheelchair">Wheelchair</label>
+        <input type="radio" name="estimatorService" id="svcAmbulatory" value="ambulatory">
+        <label for="svcAmbulatory">Ambulatory</label>
+      </fieldset>
+
+      <fieldset class="estimator__seg">
+        <legend class="visually-hidden">Trip type</legend>
+        <input type="radio" name="estimatorTrip" id="tripOneway" value="oneway" checked>
+        <label for="tripOneway">One way</label>
+        <input type="radio" name="estimatorTrip" id="tripRound" value="roundtrip">
+        <label for="tripRound">Round trip</label>
+      </fieldset>
+
+      <div class="estimator__field">
+        <label for="estimatorPickup">Pickup address</label>
+        <input id="estimatorPickup" type="text" role="combobox" aria-expanded="false" aria-controls="estimatorPickupList" aria-autocomplete="list" autocomplete="off" spellcheck="false" placeholder="Start typing an address">
+        <ul class="estimator__list" id="estimatorPickupList" role="listbox" aria-label="Pickup suggestions" hidden></ul>
+      </div>
+      <div class="estimator__field">
+        <label for="estimatorDest">Destination address</label>
+        <input id="estimatorDest" type="text" role="combobox" aria-expanded="false" aria-controls="estimatorDestList" aria-autocomplete="list" autocomplete="off" spellcheck="false" placeholder="Start typing an address">
+        <ul class="estimator__list" id="estimatorDestList" role="listbox" aria-label="Destination suggestions" hidden></ul>
+      </div>
+
+      <div class="estimator__map-wrap" id="estimatorMapWrap" hidden>
+        <div class="estimator__map" id="estimatorMap" role="img" aria-label="Map showing the driving route from pickup to destination"></div>
+      </div>
+
+      <div class="estimator__result" id="estimatorResult" aria-live="polite"></div>
+    </aside>
   </div>
 </section>
 
@@ -456,5 +495,8 @@
 </nav>
 
 <script src="js/site.js" defer></script>
+<script src="js/quote-config.js" defer></script>
+<script src="js/pricing-rules.js" defer></script>
+<script src="js/quote.js" defer></script>
 </body>
 </html>
