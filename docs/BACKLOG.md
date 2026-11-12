@@ -14,9 +14,9 @@ This backlog separates confirmation work from approved implementation. Items are
 
 ## Priority 1 Confirm public operational claims
 
-- [ ] Resolve the conflict between the live five-county/Montgomery/Dayton language and the current Dayton guardrail.
-- [ ] Confirm whether same-day service remains accurate.
-- [ ] Confirm operating days and hours.
+- [x] Service area confirmed by Russ November 11, 2026: four counties (Hamilton, Butler, Warren, Clermont). Montgomery County and Dayton-area cities removed on branch `feature/update-operating-hours`, not yet live.
+- [x] Same-day service wording confirmed by Russ November 11, 2026: keep "same-day when the schedule allows" inside operating hours (no site change).
+- [x] Operating days and hours confirmed by Russ November 11, 2026: Monday through Sunday, 6:00 AM to 4:00 PM (site updated on branch `feature/update-operating-hours`, not yet live).
 - [ ] Confirm wheelchair types, securement language, assistance level, companions, wait/return, and discharge/transfer capability.
 - [ ] Confirm private-pay, facility-direct, loaded-mile, card/electronic payment, and invoice statements.
 - [ ] Confirm driver screening, training, insurance, maintenance, documentation, and facility-support claims.
@@ -53,15 +53,15 @@ Until confirmed, do not repeat these claims in new pages, metadata, structured d
 
 ## Priority 4 Proposed pricing dashboard discovery
 
-**Status: concept only.**
+**Status: stage one prototype built on `feature/pricing-quote-tool` (see `docs/PRICING_TOOL.md`). Restricted Google key added; visible on the PR #2 preview only. Not published. On November 11, 2026, Russ approved keeping Google mapping without a separate privacy review and approved publishing.**
 
-- [ ] Approve the underlying financial model and exact pricing rules.
+- [x] Approve stage one rates (Ambulatory $65 + $4.00/mi, Wheelchair $75 + $4.25/mi). Full cost model still to be built.
 - [ ] Define estimate, quote, and booking-confirmation states.
 - [ ] Define required inputs and exception-handling without PHI.
 - [ ] Select and price the routing provider.
 - [ ] Decide address processing and retention rules.
 - [ ] Define manual review, quote expiration, and capacity checks.
-- [ ] Decide Microsoft Bookings handoff.
+- [x] Decide Microsoft Bookings handoff (Request a ride opens Bookings; Bookings checks availability).
 - [ ] Decide payment timing, processor, cancellation/refund rules, and facility billing treatment.
 - [ ] Complete privacy, security, accessibility, tax, insurance, and legal review.
 - [ ] Build a non-production prototype only after the decisions above are documented.

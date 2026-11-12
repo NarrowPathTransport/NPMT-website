@@ -6,11 +6,11 @@ Write for the passenger, the family member arranging care, and the facility prof
 
 ## Protected hero copy
 
-Do not revise this block without Russ's explicit approval. Russ approved the kicker and button changes below on September 28, 2026, following outside feedback that the hero should state the service plainly and offer request and call as the two actions.
+Do not revise this block without Russ's explicit approval. Russ approved the kicker change to Greater Cincinnati on November 11, 2026. On the same date he approved centering the hero (kicker, headline, lede, buttons, and meta row), with the copy unchanged. He approved the kicker and button changes below on September 28, 2026, following outside feedback that the hero should state the service plainly and offer request and call as the two actions.
 
 **Kicker**
 
-> Wheelchair & ambulatory transport · Southwest Ohio
+> Wheelchair & ambulatory transport · Greater Cincinnati
 
 **Headline**
 
@@ -40,6 +40,9 @@ The words `peace of mind` receive the existing italic, light-gold emphasis.
 - Tagline: `Guided by Faith, Driven by Care.` As of September 28, 2026, Russ approved using faith and this slogan in marketing, without overdoing it. Keep the existing faith content proportionate and do not add more by default.
 
 ## Copy rules
+
+- On November 11, 2026, Russ asked for a site-wide pass so every page sounds like a real person wrote it. Body copy now uses contractions and plain everyday wording. Facts, hours, counties, rates, services, and policies were not changed. Keep new copy in this conversational voice.
+- On November 11, 2026, Russ removed the story of the woman who paid $1,000 for a ride (homepage quote and About page section). Do not bring it back.
 
 - Lead with the user's next step.
 - Prefer concrete language over adjectives.

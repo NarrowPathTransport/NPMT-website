@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Narrow Path Medical Transport | Wheelchair &amp; Ambulatory Transport, Southwest Ohio</title>
-<meta name="description" content="Non-emergency wheelchair and ambulatory medical transport across Hamilton, Butler, Warren, Clermont and Montgomery counties. Guided by Faith, Driven by Care.">
+<meta name="description" content="Non-emergency wheelchair and ambulatory medical transport across Hamilton, Butler, Warren and Clermont counties. Guided by Faith, Driven by Care.">
 <link rel="canonical" href="https://narrowpathtransport.com/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Narrow Path Medical Transport">
@@ -70,7 +70,7 @@
 
   <div class="wrap hero__inner">
     <div class="hero__content">
-      <p class="hero__kicker">Wheelchair &amp; ambulatory transport · Southwest Ohio</p>
+      <p class="hero__kicker">Wheelchair &amp; ambulatory transport · Greater Cincinnati</p>
       <h1>Your transportation should be the <em>easy&nbsp;part.</em></h1>
       <p class="hero__lede">
         On time. Transparent pricing. Clean vehicles. Friendly, professional drivers. Clear, honest communication. Attentive door-to-door care. Transportation that gives you and your family <em>peace of mind</em>, from pickup to drop-off.
@@ -83,7 +83,7 @@
       <div class="hero__meta">
         <span>
           <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-          Five Ohio counties
+          Hamilton, Butler, Warren &amp; Clermont
         </span>
         <span>
           <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
@@ -95,6 +95,45 @@
         </span>
       </div>
     </div>
+
+    <!-- Trip estimate tool. Hidden until js/quote-config.js has a Google key. -->
+    <aside class="estimator" id="estimator" aria-labelledby="estimatorTitle" hidden>
+      <h2 class="estimator__title" id="estimatorTitle">Estimate your trip</h2>
+      <p class="estimator__sub">Enter two addresses to see the cost. No payment is due until after your ride.</p>
+
+      <fieldset class="estimator__seg">
+        <legend class="visually-hidden">Transportation type</legend>
+        <input type="radio" name="estimatorService" id="svcWheelchair" value="wheelchair" checked>
+        <label for="svcWheelchair">Wheelchair</label>
+        <input type="radio" name="estimatorService" id="svcAmbulatory" value="ambulatory">
+        <label for="svcAmbulatory">Ambulatory</label>
+      </fieldset>
+
+      <fieldset class="estimator__seg">
+        <legend class="visually-hidden">Trip type</legend>
+        <input type="radio" name="estimatorTrip" id="tripOneway" value="oneway" checked>
+        <label for="tripOneway">One way</label>
+        <input type="radio" name="estimatorTrip" id="tripRound" value="roundtrip">
+        <label for="tripRound">Round trip</label>
+      </fieldset>
+
+      <div class="estimator__field">
+        <label for="estimatorPickup">Pickup address</label>
+        <input id="estimatorPickup" type="text" role="combobox" aria-expanded="false" aria-controls="estimatorPickupList" aria-autocomplete="list" autocomplete="off" spellcheck="false" placeholder="Start typing an address">
+        <ul class="estimator__list" id="estimatorPickupList" role="listbox" aria-label="Pickup suggestions" hidden></ul>
+      </div>
+      <div class="estimator__field">
+        <label for="estimatorDest">Destination address</label>
+        <input id="estimatorDest" type="text" role="combobox" aria-expanded="false" aria-controls="estimatorDestList" aria-autocomplete="list" autocomplete="off" spellcheck="false" placeholder="Start typing an address">
+        <ul class="estimator__list" id="estimatorDestList" role="listbox" aria-label="Destination suggestions" hidden></ul>
+      </div>
+
+      <div class="estimator__map-wrap" id="estimatorMapWrap" hidden>
+        <div class="estimator__map" id="estimatorMap" role="img" aria-label="Map showing the driving route from pickup to destination"></div>
+      </div>
+
+      <div class="estimator__result" id="estimatorResult" aria-live="polite"></div>
+    </aside>
   </div>
 </section>
 
@@ -102,8 +141,7 @@
 <section class="band band--tight band--cream">
   <div class="wrap wrap--narrow section-head--center">
     <p style="max-width:64ch;margin-inline:auto;color:var(--ink-soft);font-size:1.0625rem;">
-      Request a ride online, call, or email. We review every request and confirm the
-      pickup window and the price with you before the trip is final.
+      Request a ride online, call, or email. We look over every request and confirm the pickup window and price with you before anything is final.
     </p>
   </div>
 </section>
@@ -120,10 +158,9 @@
   <div class="wrap">
     <div class="section-head section-head--center">
       <p class="eyebrow">What we do</p>
-      <h2>Transport built around the appointment,<br>not around the schedule</h2>
+      <h2>Rides built around your appointment,<br>not our schedule</h2>
       <p class="lede">
-        Wheelchair and ambulatory transport for adults who need a safe, steady ride to
-        the care they depend on.
+        Wheelchair and ambulatory rides for adults who need a steady, dependable way to get to the care they count on.
       </p>
     </div>
 
@@ -133,7 +170,7 @@
           <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="16" r="5"/><path d="M10 4v7h5l3 6h3"/><circle cx="10" cy="4" r="1.6"/></svg>
         </span>
         <h3>Wheelchair transport</h3>
-        <p>Manual and power chairs, secured with a four-point system on every trip. You stay in your own chair.</p>
+        <p>Manual and power chairs, tied down at four points on every trip. You stay in your own chair.</p>
         <span class="card__more">Learn more
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13m-5-6 6 6-6 6"/></svg>
         </span>
@@ -144,7 +181,7 @@
           <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13" cy="4" r="1.8"/><path d="M12 22l1.5-6.5L10 13l1-5 4 2 3 1"/><path d="M11 8 8 10l-1 4"/></svg>
         </span>
         <h3>Ambulatory transport</h3>
-        <p>For passengers who walk with a cane, a walker, or a steady arm. Help to the door and back.</p>
+        <p>For passengers who walk, with a cane, a walker, or just a steady arm. We help you to the door and back.</p>
         <span class="card__more">Learn more
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13m-5-6 6 6-6 6"/></svg>
         </span>
@@ -155,7 +192,7 @@
           <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15.6-6.1L21 8"/><path d="M21 4v4h-4"/><path d="M21 12a9 9 0 0 1-15.6 6.1L3 16"/><path d="M3 20v-4h4"/></svg>
         </span>
         <h3>Standing appointments</h3>
-        <p>Dialysis, infusion, therapy and other recurring care, booked once and held on the calendar.</p>
+        <p>Dialysis, infusion, therapy, and other recurring care. Book it once and we keep it on the calendar.</p>
         <span class="card__more">Learn more
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13m-5-6 6 6-6 6"/></svg>
         </span>
@@ -166,7 +203,7 @@
           <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21V8l9-5 9 5v13"/><path d="M9 21v-6h6v6"/><path d="M12 7v4M10 9h4"/></svg>
         </span>
         <h3>Discharge and transfers</h3>
-        <p>Hospital to home, hospital to facility, facility to facility. Same-day when the schedule allows.</p>
+        <p>Hospital to home, hospital to facility, or facility to facility. Same-day when our schedule allows.</p>
         <span class="card__more">Learn more
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13m-5-6 6 6-6 6"/></svg>
         </span>
@@ -181,10 +218,9 @@
     <div class="split">
       <div>
         <p class="eyebrow">The standard</p>
-        <h2>What we hold, in plain terms</h2>
+        <h2>What you can count on</h2>
         <p class="lede">
-          The standards in this industry are low enough that cutting corners rarely
-          costs anything. That is exactly why holding the line is the whole business.
+          In this industry, cutting corners rarely costs a company anything. That&rsquo;s exactly why we don&rsquo;t.
         </p>
         <div class="verse" style="margin-top:2rem;">
           <p>Small is the gate and narrow the road that leads to life, and only a few find it.</p>
@@ -196,57 +232,38 @@
         <div class="standard">
           <span class="standard__mark"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg></span>
           <div>
-            <h4>We arrive when we said we would</h4>
-            <p>And when something changes, you hear it from us first, before you have to ask.</p>
+            <h4>We show up when we said we would</h4>
+            <p>If something changes, you&rsquo;ll hear it from us first, before you have to ask.</p>
           </div>
         </div>
         <div class="standard">
           <span class="standard__mark"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg></span>
           <div>
-            <h4>The phone gets answered</h4>
-            <p>A missed pickup with nobody picking up the line is its own kind of harm. We do not do that.</p>
+            <h4>Someone answers the phone</h4>
+            <p>A missed pickup is bad enough. Not being able to reach anyone makes it worse. We pick up.</p>
           </div>
         </div>
         <div class="standard">
           <span class="standard__mark"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg></span>
           <div>
             <h4>Clean vehicles, every trip</h4>
-            <p>Wheelchair-accessible vehicles cleaned and inspected before the day starts. Heat that works. Air conditioning that works.</p>
+            <p>Our wheelchair-accessible vehicles are cleaned and checked before the day starts. The heat works, and so does the air conditioning.</p>
           </div>
         </div>
         <div class="standard">
           <span class="standard__mark"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg></span>
           <div>
-            <h4>Drivers who speak to you</h4>
-            <p>Introduced by name, trained on securement, and expected to treat every passenger like their own family.</p>
+            <h4>Drivers who talk to you</h4>
+            <p>They introduce themselves by name, they&rsquo;re trained on wheelchair securement, and we expect them to treat every passenger like family.</p>
           </div>
         </div>
         <div class="standard">
           <span class="standard__mark"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 13 4 4L19 7"/></svg></span>
           <div>
             <h4>Nobody drives tired</h4>
-            <p>If fatigue is a factor, the trip moves or it is declined. It is written down, and it is enforced.</p>
+            <p>If a driver is too tired, the trip gets moved or we turn it down. That&rsquo;s a written rule, and we stick to it.</p>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================== story -->
-<section class="band band--pine-grad">
-  <div class="wrap">
-    <div class="quote">
-      <svg class="quote__mark" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 7C6 7 4 9 4 12s2 5 4 5c1.5 0 2.5-1 2.5-2.5S9.5 12 8 12c-.6 0-1 .1-1.4.4C7 10.5 8 9 9.5 8.4L9 7Z"/><path d="M19 7c-3 0-5 2-5 5s2 5 4 5c1.5 0 2.5-1 2.5-2.5S19.5 12 18 12c-.6 0-1 .1-1.4.4C17 10.5 18 9 19.5 8.4L19 7Z"/></svg>
-      <p>
-        She paid a thousand dollars of her own money for a ride her insurance would
-        have covered in full. Not because she needed a different kind of vehicle.
-        Because she had been failed so many times that paying was worth it to feel
-        safe.
-      </p>
-      <cite>Why this company exists</cite>
-      <div class="btn-row" style="justify-content:center;">
-        <a class="btn btn--outline-light" href="about.html">Read our story</a>
       </div>
     </div>
   </div>
@@ -257,9 +274,9 @@
   <div class="wrap">
     <div class="section-head section-head--center">
       <p class="eyebrow">Who we serve</p>
-      <h2>Two people are usually making this decision</h2>
+      <h2>Usually two people are part of this decision</h2>
       <p class="lede">
-        The passenger, and the person who loves them. We write everything for both.
+        The passenger, and the person who loves them. We wrote this site with both of you in mind.
       </p>
     </div>
 
@@ -270,10 +287,7 @@
         </span>
         <h3>Families and private clients</h3>
         <p style="font-size:1.0625rem;">
-          If you are arranging transport for a parent or a spouse, you are trusting a
-          stranger with someone you love, with no way to watch. We tell you the driver's
-          name, we tell you when plans change, and we quote every trip before it happens
-          so there is never a surprise.
+          If you&rsquo;re setting up rides for a parent or a spouse, you&rsquo;re trusting someone you&rsquo;ve never met with a person you love, and you can&rsquo;t be there to watch. So we tell you the driver&rsquo;s name, we let you know when plans change, and we give you the price before every trip. No surprises.
         </p>
         <div class="btn-row" style="margin-top:1.5rem;">
           <a class="btn btn--ghost" href="services.html">How it works</a>
@@ -286,9 +300,7 @@
         </span>
         <h3>Facilities and care teams</h3>
         <p style="font-size:1.0625rem;">
-          Skilled nursing, assisted living, adult day, dialysis, hospice, home health and
-          discharge planning. One point of contact, a certificate of insurance on file,
-          and a straight answer about what we can and cannot cover on a given day.
+          Skilled nursing, assisted living, adult day, dialysis, hospice, home health, and discharge planning. You get one point of contact, our certificate of insurance on file, and a straight answer about what we can and can&rsquo;t cover on any given day.
         </p>
         <div class="btn-row" style="margin-top:1.5rem;">
           <a class="btn btn--ghost" href="facilities.html">For facilities</a>
@@ -304,11 +316,9 @@
     <div class="split">
       <div>
         <p class="eyebrow">Where we go</p>
-        <h2>Five contiguous counties</h2>
+        <h2>Four counties around Cincinnati</h2>
         <p>
-          Our footprint follows the I-75 and I-71 corridors, roughly a 55 mile operating
-          radius. Ohio only, and we say so plainly rather than stretching to cover a trip
-          we should not take.
+          We cover the I-75 and I-71 corridors around Cincinnati, in Ohio only. If a trip falls outside that, we&rsquo;ll tell you up front instead of stretching to take it.
         </p>
       </div>
 
@@ -337,12 +347,6 @@
             <li>Batavia</li><li>Milford</li><li>Amelia</li>
           </ul>
         </div>
-        <div class="area-group">
-          <h4>Montgomery County</h4>
-          <ul class="pills">
-            <li>Dayton</li><li>Kettering</li><li>Centerville</li>
-          </ul>
-        </div>
       </div>
     </div>
   </div>
@@ -360,25 +364,25 @@
       <div class="step">
         <div>
           <h4>You tell us the appointment</h4>
-          <p>Where it is, what time it starts, and whether the passenger uses a wheelchair or walks. That is enough to begin.</p>
+          <p>Where it is, what time it starts, and whether the passenger uses a wheelchair or walks. That&rsquo;s all we need to get started.</p>
         </div>
       </div>
       <div class="step">
         <div>
           <h4>We quote the trip before you commit</h4>
-          <p>A written price for that specific trip, based on the route. You will know the number before anyone gets in a vehicle.</p>
+          <p>You&rsquo;ll get a written price for that specific trip, based on the route, before anyone gets in a vehicle.</p>
         </div>
       </div>
       <div class="step">
         <div>
           <h4>We confirm and hold the time</h4>
-          <p>You get a confirmation with the pickup window and the driver's name. If anything shifts, you hear from us.</p>
+          <p>You&rsquo;ll get a confirmation with the pickup window and the driver&rsquo;s name. If anything changes, you&rsquo;ll hear from us.</p>
         </div>
       </div>
       <div class="step">
         <div>
           <h4>Door through door, both ways</h4>
-          <p>Help from inside the residence to the vehicle, and from the vehicle into the appointment. Return trips arranged the same way.</p>
+          <p>We help from inside the home to the vehicle, and from the vehicle into the appointment. The ride home works the same way.</p>
         </div>
       </div>
     </div>
@@ -390,10 +394,9 @@
   <div class="wrap">
     <div class="cta-panel">
       <p class="eyebrow" style="justify-content:center;">Start a conversation</p>
-      <h2>Tell us who you are caring for</h2>
+      <h2>Tell us who you&rsquo;re caring for</h2>
       <p>
-        Whether you are a daughter planning ahead, or a discharge planner looking for
-        somebody dependable, we would like to hear from you.
+        Whether you&rsquo;re a daughter planning ahead or a discharge planner who needs someone dependable, we&rsquo;d love to hear from you.
       </p>
       <div class="btn-row">
         <a class="btn btn--light" href="https://outlook.office.com/book/NarrowPathTransport@narrowpathtransport.com/?ismsaljsauthenabled" target="_blank" rel="noopener noreferrer">Request a ride</a>
@@ -443,7 +446,7 @@
           <li><a href="https://outlook.office.com/book/NarrowPathTransport@narrowpathtransport.com/?ismsaljsauthenabled" target="_blank" rel="noopener noreferrer">Request a ride</a></li>
           <li><a href="https://outlook.office.com/book/NarrowPathTransport@narrowpathtransport.com/?ismsaljsauthenabled" target="_blank" rel="noopener noreferrer"><img class="footer-qr" src="assets/img/schedule-transport-qr.png" width="600" height="600" alt="QR code to request a ride online" loading="lazy"></a></li>
           <li style="margin-top:1rem;color:rgba(255,255,255,0.62);">
-            Monday through Thursday<br>Closed Friday, Saturday and Sunday
+            Monday through Sunday<br>6:00 AM to 4:00 PM
           </li>
         </ul>
       </div>
@@ -462,5 +465,8 @@
 </nav>
 
 <script src="js/site.js" defer></script>
+<script src="js/quote-config.js" defer></script>
+<script src="js/pricing-rules.js" defer></script>
+<script src="js/quote.js" defer></script>
 </body>
 </html>

@@ -73,7 +73,6 @@ The live site contains current-state claims that must be confirmed by Russ befor
 
 - Five-county service area, including Montgomery County and Dayton-area cities.
 - Same-day service when the schedule allows.
-- Monday-through-Thursday operating hours and weekend closure.
 - Manual and power-wheelchair capability.
 - Door-through-door assistance and four-point securement language.
 - Private-pay and facility-direct billing terms.

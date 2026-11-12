@@ -83,7 +83,7 @@ Review the deploy preview, then merge to `main`. Keep `live-baseline-2026-09-28`
 
 ## Current priority
 
-Preserve the live site while confirming the public claims listed in `docs/BACKLOG.md`. The pricing dashboard is a concept only. Do not build or publish it until its pricing rules, privacy boundary, routing provider, quote status, booking handoff, and payment flow are approved.
+Preserve the live site while confirming the public claims listed in `docs/BACKLOG.md`. A stage-one trip estimate tool is prototyped on `feature/pricing-quote-tool` (see `docs/PRICING_TOOL.md`). Russ approved publishing it on November 11, 2026. Do not add payment or live availability without his explicit approval.
 
 ## Safe first prompt
 
