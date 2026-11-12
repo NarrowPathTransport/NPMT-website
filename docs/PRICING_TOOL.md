@@ -13,6 +13,10 @@ Status: built on branch `feature/pricing-quote-tool` (PR #2) with a restricted G
 - "Request a ride" hands off to Microsoft Bookings. Bookings is the real availability check. The site has no live availability and takes no advance payment.
 - Payment is after the trip (payment link or invoice). Early payment only after a trip is confirmed. Not built yet.
 
+## Owner decisions
+
+- November 11, 2026: Russ approved keeping Google Maps for the estimate tool without a separate privacy review, and approved publishing to the live site.
+
 ## Wording rules
 
 - The tool says "estimate", never "quote" or "final price".

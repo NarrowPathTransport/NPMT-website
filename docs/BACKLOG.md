@@ -53,7 +53,7 @@ Until confirmed, do not repeat these claims in new pages, metadata, structured d
 
 ## Priority 4 Proposed pricing dashboard discovery
 
-**Status: stage one prototype built on `feature/pricing-quote-tool` (see `docs/PRICING_TOOL.md`). Restricted Google key added; visible on the PR #2 preview only. Not published. Privacy review of Google mapping still open (GUARDRAILS.md).**
+**Status: stage one prototype built on `feature/pricing-quote-tool` (see `docs/PRICING_TOOL.md`). Restricted Google key added; visible on the PR #2 preview only. Not published. On November 11, 2026, Russ approved keeping Google mapping without a separate privacy review and approved publishing.**
 
 - [x] Approve stage one rates (Ambulatory $65 + $4.00/mi, Wheelchair $75 + $4.25/mi). Full cost model still to be built.
 - [ ] Define estimate, quote, and booking-confirmation states.
