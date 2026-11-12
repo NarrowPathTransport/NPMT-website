@@ -41,6 +41,8 @@ The words `peace of mind` receive the existing italic, light-gold emphasis.
 
 ## Copy rules
 
+- On November 11, 2026, Russ asked for a site-wide pass so every page sounds like a real person wrote it. Body copy now uses contractions and plain everyday wording. Facts, hours, counties, rates, services, and policies were not changed. Keep new copy in this conversational voice.
+
 - Lead with the user's next step.
 - Prefer concrete language over adjectives.
 - Explain non-emergency scope clearly.

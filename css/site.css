@@ -162,8 +162,8 @@ li:last-child { margin-bottom: 0; }
 .band--pine h2,
 .band--pine h3,
 .band--pine h4 { color: #fff; }
-.band--pine a { color: var(--gold-light); }
-.band--pine a:hover { color: #fff; }
+.band--pine a:not(.btn) { color: var(--gold-light); }
+.band--pine a:not(.btn):hover { color: #fff; }
 .band--pine strong { color: #fff; }
 
 /* Soft pine gradient panel, used sparingly */
@@ -803,7 +803,8 @@ li:last-child { margin-bottom: 0; }
 
 /* --------------------------------------------------------------- cards */
 .grid { display: grid; gap: 1.25rem; }
-.grid--2 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.grid--2 { grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 700px) { .grid--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .grid--3 { grid-template-columns: repeat(auto-fit, minmax(255px, 1fr)); }
 .grid--4 { grid-template-columns: repeat(auto-fit, minmax(215px, 1fr)); }
 
@@ -1050,6 +1051,7 @@ li:last-child { margin-bottom: 0; }
   margin-bottom: 1rem;
   padding-bottom: 0.6rem;
   border-bottom: 2px solid var(--line);
+  max-width: none;
 }
 
 details.qa {
@@ -1142,6 +1144,10 @@ details.qa[open] > summary::after { transform: rotate(-135deg); }
 
 /* ------------------------------------------------------- contact blocks */
 .contact-cards { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+@media (min-width: 1000px) {
+  /* The email address is the longest item, so its card gets a little more room. */
+  .contact-cards { grid-template-columns: 1fr 1.4fr 1fr 1fr; }
+}
 .contact-card {
   background: #fff;
   border: 1px solid var(--cream-line);
@@ -1159,11 +1165,11 @@ details.qa[open] > summary::after { transform: rotate(-135deg); }
   margin-bottom: 0.6rem;
 }
 .contact-card p { font-size: 1.0625rem; margin: 0; }
-.contact-card a { font-weight: 600; text-decoration: none; }
+.contact-card a { font-weight: 600; text-decoration: none; overflow-wrap: anywhere; }
 .contact-card a:hover { text-decoration: underline; }
 
 /* --------------------------------------------------------------- hours */
-.hours { width: 100%; border-collapse: collapse; max-width: 460px; }
+.hours { width: 100%; border-collapse: collapse; }
 .hours th, .hours td { text-align: left; padding: 0.7rem 0; border-bottom: 1px solid var(--cream-line); font-size: 1rem; }
 .hours th { font-weight: 600; color: var(--pine-deep); }
 .hours td { color: var(--ink-soft); text-align: right; }
@@ -1187,6 +1193,8 @@ details.qa[open] > summary::after { transform: rotate(-135deg); }
 /* -------------------------------------------------------------- footer */
 .site-footer {
   background: var(--pine-deep);
+  /* Keeps the footer distinct when a dark section sits right above it. */
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
   color: rgba(255, 255, 255, 0.72);
   padding-block: clamp(3rem, 6vw, 4.5rem) 2rem;
   font-size: 0.9375rem;
@@ -1206,7 +1214,7 @@ details.qa[open] > summary::after { transform: rotate(-135deg); }
 .site-footer li { margin-bottom: 0.6rem; }
 .footer-qr { width: 108px; margin-top: 0.75rem; border-radius: 5px; }
 .contact-booking { padding: clamp(1.5rem, 4vw, 2.5rem); border: 1px solid var(--cream-line); border-radius: var(--radius); background: var(--paper); box-shadow: var(--shadow-s); }
-.contact-booking .btn { margin-bottom: 0.75rem; }
+.contact-booking .btn-row { margin: 1.5rem 0; }
 .qr-schedule img { width: min(220px, 100%); margin: 1rem 0; border-radius: 7px; }
 
 .footer-grid {
@@ -1307,3 +1315,6 @@ details.qa[open] > summary::after { transform: rotate(-135deg); }
   .site-header, .nav-toggle, .cta-panel, .btn, .quick-actions { display: none !important; }
   body { font-size: 11pt; color: #000; }
 }
+
+/* Keeps short phrases like phone numbers on one line. */
+.nowrap { white-space: nowrap; }
