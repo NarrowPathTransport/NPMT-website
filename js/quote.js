@@ -341,12 +341,18 @@
   function loadMaps() {
     if (mapsPromise) { return mapsPromise; }
     mapsPromise = new Promise(function (resolve, reject) {
-      var s = document.createElement("script");
-      s.src = "https://maps.googleapis.com/maps/api/js?key=" + encodeURIComponent(KEY) + "&v=weekly&loading=async";
-      s.async = true;
-      s.onload = function () {
+      /* Google calls this function when the Maps script is ready. Waiting for
+         it is what makes google.maps.importLibrary available. */
+      window.__nptMapsReady = function () {
+        if (!window.google || !google.maps || typeof google.maps.importLibrary !== "function") {
+          reject(new Error("Maps library not available"));
+          return;
+        }
         Promise.all([google.maps.importLibrary("maps"), google.maps.importLibrary("marker")]).then(resolve, reject);
       };
+      var s = document.createElement("script");
+      s.src = "https://maps.googleapis.com/maps/api/js?key=" + encodeURIComponent(KEY) + "&v=weekly&loading=async&callback=__nptMapsReady";
+      s.async = true;
       s.onerror = reject;
       document.head.appendChild(s);
     });
