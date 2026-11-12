@@ -15,7 +15,7 @@ This backlog separates confirmation work from approved implementation. Items are
 ## Priority 1 Confirm public operational claims
 
 - [ ] Resolve the conflict between the live five-county/Montgomery/Dayton language and the current Dayton guardrail.
-- [ ] Confirm whether same-day service remains accurate.
+- [x] Same-day service wording confirmed by Russ November 11, 2026: keep "same-day when the schedule allows" inside operating hours (no site change).
 - [x] Operating days and hours confirmed by Russ November 11, 2026: Monday through Sunday, 6:00 AM to 4:00 PM (site updated on branch `feature/update-operating-hours`, not yet live).
 - [ ] Confirm wheelchair types, securement language, assistance level, companions, wait/return, and discharge/transfer capability.
 - [ ] Confirm private-pay, facility-direct, loaded-mile, card/electronic payment, and invoice statements.
