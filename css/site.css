@@ -373,7 +373,7 @@ li:last-child { margin-bottom: 0; }
   cursor: pointer;
 }
 
-@media (max-width: 1020px) {
+@media (max-width: 1120px) {
   .nav {
     position: fixed;
     inset: 100% 0 auto 0;
@@ -563,6 +563,8 @@ li:last-child { margin-bottom: 0; }
   box-shadow: 0 18px 44px rgba(0, 0, 0, 0.28);
 }
 .estimator[hidden] { display: none; }
+/* The sitewide paragraph width limit would stop the price row short of the card edge. */
+.estimator p { max-width: none; }
 @supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
   .estimator {
     background: rgba(13, 59, 48, 0.5);

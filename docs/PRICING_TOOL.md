@@ -1,6 +1,6 @@
 # Trip estimate tool (stage one prototype)
 
-Status: prototype on branch `feature/pricing-quote-tool`. Not live. The tool stays hidden until a Google key is added to `js/quote-config.js`, and nothing is published without Russ's approval.
+Status: built on branch `feature/pricing-quote-tool` (PR #2) with a restricted Google key in `js/quote-config.js`, so the tool shows on the deploy preview. Not on the live site. It goes live only when Russ approves the merge. Clearing the key hides it again.
 
 ## Approved for stage one
 
@@ -27,7 +27,11 @@ Status: prototype on branch `feature/pricing-quote-tool`. Not live. The tool sta
 - Route failures also show the phone number.
 - Maps JavaScript loads only after a route is computed, to limit map charges.
 
-## Setup Russ must do
+## Google setup (done November 11, 2026)
+
+Project "Narrow Path Website", free trial through February 10, 2027. Key restricted to narrowpathtransport.com, www, and the PR #2 preview address, and to the three APIs below. $1 monthly budget alert. Remove the preview address from the key after launch. Still to do: a daily quota cap.
+
+## Original setup steps
 
 1. Create a Google Cloud project with billing and budget alerts.
 2. Enable Places API (New), Routes API, and Maps JavaScript API.
