@@ -6,11 +6,11 @@ Write for the passenger, the family member arranging care, and the facility prof
 
 ## Protected hero copy
 
-Do not revise this block without Russ's explicit approval. Russ approved the kicker and button changes below on September 28, 2026, following outside feedback that the hero should state the service plainly and offer request and call as the two actions.
+Do not revise this block without Russ's explicit approval. Russ approved the kicker change to Greater Cincinnati on November 11, 2026. He approved the kicker and button changes below on September 28, 2026, following outside feedback that the hero should state the service plainly and offer request and call as the two actions.
 
 **Kicker**
 
-> Wheelchair & ambulatory transport · Southwest Ohio
+> Wheelchair & ambulatory transport · Greater Cincinnati
 
 **Headline**
 
