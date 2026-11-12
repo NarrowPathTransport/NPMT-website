@@ -291,7 +291,7 @@
     els.result.appendChild(total);
 
     els.result.appendChild(h("p", "estimator__note",
-      "This is an estimate based on the driving route shown. We confirm your final price in writing before your trip. A route change or an added stop can change it."));
+      "We bill the miles shown here. If the pickup, destination, or stops change, we update the price before your trip. We confirm your price in writing before you ride."));
     els.result.appendChild(h("p", "estimator__note estimator__note--strong",
       "No payment is due until after your ride."));
 

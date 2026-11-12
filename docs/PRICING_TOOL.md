@@ -16,7 +16,8 @@ Status: prototype on branch `feature/pricing-quote-tool`. Not live. The tool sta
 ## Wording rules
 
 - The tool says "estimate", never "quote" or "final price".
-- Final price is confirmed in writing before the trip.
+- Billing basis (approved by Russ, November 11, 2026): NPT bills the estimated miles shown by the tool, not odometer miles. If the pickup, destination, or stops change, NPT re-quotes before the trip.
+- Final price is confirmed in writing before the trip. The tool does not promise there are no other charges.
 - "No payment is due until after your ride."
 - Do not enter names or medical details. The tool collects only two addresses, service type, and trip type. Nothing is stored or sent to NPT.
 
